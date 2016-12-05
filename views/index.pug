@@ -1,0 +1,22 @@
+extends layout 
+
+block title
+    title= title
+    h2
+        a(href=url+'/add') Add User
+
+block content
+    center
+        h2= message
+        
+        table(border=5)
+            tr
+                th name
+                th note
+                th edit
+            for user in users
+                tr
+                    td= user.name
+                    td= user.death_note
+                    td
+                        a(href=url+'/edit?name='+user.name) edit me

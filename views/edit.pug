@@ -1,0 +1,13 @@
+extends layout
+block title
+    h3 Edit Your death note dude
+block content
+    form(method='POST' action='/edit')
+        div
+            lable first name
+            input(type='text',name='name',placeholder='Enter name',value= users.name)
+        div
+            lable death note
+            input(type='text',name='death_note',placeholder='enter note here',value= users.death_note)
+        div
+            input(type='submit' value='Submit')
